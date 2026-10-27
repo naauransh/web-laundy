@@ -1,4 +1,5 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# See https://help.github.com/articles/ignoring-files/
 
 # dependencies
 /node_modules
@@ -30,8 +31,9 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# environment variables
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -39,3 +41,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Google Service Account credentials
+*service-account*.json
+*credentials*.json
+laundry-management-*.json
+
+# local simulation data
+/data/dev-data.json
+/data/dev-data-backup.json
+
+# local data backups
+/data/*.backup
+/data/*.bak
